@@ -2,9 +2,9 @@ import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors'; 
 // Rutas corregidas usando '../' para salir de la carpeta 'api'
-import gameRoutes from './route/game.route.js'; 
-import playerRoutes from './route/player.route.js'; 
-import { connectDB } from './config/db.js';
+import gameRoutes from '../route/game.route.js'; 
+import playerRoutes from '../route/player.route.js'; 
+import { connectDB } from '../config/db.js';
 
 // NOTA: dotenv.config() es solo para desarrollo local. En Vercel, las variables
 // se inyectan automáticamente.
@@ -54,8 +54,8 @@ app.get('/', (req, res) => {
 });
 
 // Adjunta los Routers. La URL final será /api/games y /api/players
-app.use('/api/games', gameRoutes);
-app.use('/api/players', playerRoutes);
+app.use('/games', gameRoutes);
+app.use('/players', playerRoutes);
 
 
 // --- 3. Exportación del Handler ---
