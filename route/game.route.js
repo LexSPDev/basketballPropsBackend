@@ -5,7 +5,7 @@ import games from '../models/games.model.js';
 const router = express.Router();
 
 //Get all games
-router.get('/api/games', async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const gamesData = await games.find();
     res.status(200).json(gamesData);
