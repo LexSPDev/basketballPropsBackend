@@ -33,8 +33,8 @@ app.get('/', (req, res) => {
 
 // Adjunta los Routers.
 // La URL final para estos endpoints será: [Dominio]/api/games y [Dominio]/api/players
-app.use('/', gameRoutes);
-//app.use('/api/players', playerRoutes);
+app.use('/api/games', gameRoutes);
+app.use('/api/players', playerRoutes);
 
 // --- 4. Conexión de DB y Exportación del Handler (El enfoque Serverless) ---
 
