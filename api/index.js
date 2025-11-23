@@ -1,9 +1,9 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors'; // Importamos CORS
-import gameRoutes from './route/game.route.js'; // Debe ser un Router de Express
-import playerRoutes from './route/player.route.js'; // Debe ser un Router de Express
-import { connectDB } from './config/db.js';
+import gameRoutes from '../route/game.route.js'; // Debe ser un Router de Express
+import playerRoutes from '../route/player.route.js'; // Debe ser un Router de Express
+import { connectDB } from '../config/db.js';
 
 // --- 1. Inicialización de Entorno y Conexión de DB ---
 
